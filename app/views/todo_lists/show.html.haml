@@ -8,9 +8,8 @@
   =@todo_list.description
 %p
   %b Todo Items:
-  %ul
-    -@todo_list.todo_items.reject( &:new_record? ).each do |ti|
-      %li= ti.content
+  %ul= render @todo_list.todo_items.reject( &:new_record? )
+
 %p
   %b Todo Item:
   %span= render 'todo_items/form'
