@@ -2,11 +2,19 @@
 
 %p
   %b Title:
-  = @todo_list.title
+  =@todo_list.title
 %p
   %b Description:
-  = @todo_list.description
+  =@todo_list.description
+%p
+  %b Todo Items:
+  %ul
+    -@todo_list.todo_items.reject( &:new_record? ).each do |ti|
+      %li= ti.content
+%p
+  %b Todo Item:
+  %span= render 'todo_items/form'
 
-= link_to 'Edit', edit_todo_list_path(@todo_list)
-\|
+= link_to 'Edit', edit_todo_list_path( @todo_list )
+|
 = link_to 'Back', todo_lists_path

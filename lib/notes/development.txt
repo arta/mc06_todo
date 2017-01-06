@@ -1,0 +1,16 @@
+###############################################################################
+# 1-6-17: #####################################################################
+• Again, how to display a collection of nested resources on parent's show page
+  along with a form for a new member of the nested collection so that the
+  new_record? built for the form doesn't show in the collection?
+: Don't know the Rail's Way, so my way it is (to be replaced with a partial):
+
+  /todo_lists/show.html.haml:
+  ... 
+  %p
+    %b Todo Items:
+    %ul
+      -@todo_list.todo_items.reject( &:new_record? ).each do |ti|
+        %li= ti.content
+
+  ###############################################################################
