@@ -1,4 +1,13 @@
 ###############################################################################
+# 1-7-17: #####################################################################
+• Using:
+: https://fonts.google.com
+: http://fontawesome.io
+  also check http://glyphicons.com for awesome icons
+###############################################################################
+
+
+###############################################################################
 # 1-6-17: #####################################################################
 • Again, how to display a collection of nested resources on parent's show page
   along with a form for a new member of the nested collection so that the

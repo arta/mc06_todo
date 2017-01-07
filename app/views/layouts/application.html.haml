@@ -3,8 +3,11 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title A06Todo
-    = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    =csrf_meta_tags
+    =stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    =stylesheet_link_tag    'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'
+    =stylesheet_link_tag    'https://fonts.googleapis.com/css?family=Architects+Daughter'
+    =stylesheet_link_tag    'https://fonts.googleapis.com/css?family=Lato'
+    =javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    .container= yield
