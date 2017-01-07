@@ -12,8 +12,12 @@ class TodoItemsController < ApplicationController
   # =link_to .. [@todo_list, @todo_item], method: :delete ..
   def destroy
     @todo_item = TodoItem.find( params[:id] )
-    @todo_item.destroy
-    redirect_to @todo_list, notice:'TODO item successfully deleted.'
+    if @todo_item.destroy
+      flash[:success] = 'TODO item successfully deleted.'
+    else
+      flash[:error] = 'TODO item cannot be deleted.'
+    end
+    redirect_to @todo_list
   end
 
   private
