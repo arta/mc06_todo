@@ -13,9 +13,9 @@ class TodoItemsController < ApplicationController
   # =link_to .. [@todo_list, @todo_item], method: :delete ..
   def destroy
     if @todo_item.destroy
-      flash[:success] = 'TODO item successfully deleted.'
+      flash[:notice] = 'TODO item successfully deleted.'
     else
-      flash[:error] = 'TODO item cannot be deleted.'
+      flash[:alert] = 'TODO item cannot be deleted.'
     end
     redirect_to @todo_list
   end

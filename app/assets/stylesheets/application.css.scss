@@ -54,6 +54,11 @@ body {
 	padding: .4em;
 }
 
+#alert {
+	@extend #notice;
+	color: darken( red, 10% );
+}
+
 .container {
 	width: 50%;
 	max-width: 750px;

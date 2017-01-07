@@ -4,4 +4,9 @@ class TodoItem < ApplicationRecord
   def completed?
     completed_at?
   end
+
+  def destroy
+    return false if completed?
+    super
+  end
 end
