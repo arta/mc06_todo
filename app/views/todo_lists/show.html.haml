@@ -6,13 +6,10 @@
 %p
   %b Description:
   =@todo_list.description
-%p
-  %b Todo Items:
-  %ul= render @todo_list.todo_items.reject( &:new_record? )
 
-%p
-  %b Todo Item:
-  %span= render 'todo_items/form'
+#todo_items_wrapper
+  =render @todo_list.todo_items
+  #form= render 'todo_items/form'
 
 = link_to 'Edit', edit_todo_list_path( @todo_list )
 |

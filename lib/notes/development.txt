@@ -6,11 +6,13 @@
 : Don't know the Rail's Way, so my way it is (to be replaced with a partial):
 
   /todo_lists/show.html.haml:
-  ... 
+  ...
   %p
     %b Todo Items:
     %ul
       -@todo_list.todo_items.reject( &:new_record? ).each do |ti|
         %li= ti.content
 
-  ###############################################################################
+: Turns out empty <p> collapses (not displayed); rejecting new_record? not
+  needed when nested resource list rendered in <p>s vs. <ul><li>s
+###############################################################################
