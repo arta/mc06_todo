@@ -45,10 +45,13 @@ body {
 }
 
 #notice {
-	text-align: center;
-	font-size: 0.6em;
+	border: 1px $white_opaque solid;
+	border-radius: 5px;
 	color: $dark;
-	font-weight: 100;
+	font-size: .8em;
+	text-align: center;
+	margin: 1em 25% 2em;
+	padding: .4em;
 }
 
 .container {
